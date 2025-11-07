@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="carregou()">
+
+    <select id="select" name="" id="itens" onchange="mudarSelect()">
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+        <option value="4">Valor 4</option>
+    </select>
+    <br>
+    <div id="box" onMouseover="entrou()" onmouseleave="saiu()" onclick="clicou()"></div>
+    <br>
+    <br>
+    <br>
+    <input id="caixaTexto" type="text" placeholder="Digite alguma coisa" value="Já vem com texto" onfocus="limpaTexto()"
+        onchange="mudou()">
+    <br><br><br>
+    <p id="adiconarTexto"></p>
+    <script>
+        var cont = 0;
+        var div = document.getElementById("box");
+        function entrou() {
+
+            div.style.backgroundColor = "red";
+        }
+
+        function saiu() {
+            div.style.backgroundColor = "green";
+        }
+
+        function limpaTexto() {
+            var div = document.getElementById("caixaTexto").value = "";
+        }
+
+        function mudou() {
+            console.log('Mudou');
+        }
+
+        function mudarSelect(){
+            div.style.backgroundColor="pink";
+            cont++;
+            console.log('mudou'+cont);
+        }
+        function carregou(){
+         console.log("Adicionado ao carregar a pagina")
+        }
+    </script>
+</body>
+
+</html>
