@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formatacao{
+            font-size: 50px;
+            padding: 10px;
+            text-align: center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <p id="teste" class="formatacao"></p>
+    <br>
+    <p id="teste1" class="formatacao"></p>
+    <br>
+    <p id="teste3" class="formatacao"></p>
+    <script>
+   
+        const pessoa = ['Chirley','Santos',30]; // array
+        pessoa.push("Basileira");
+
+        pessoa.pop();
+        pessoa.shift();//tira o primeiro item
+        pessoa.unshift("Desenvolvedora");//adiciona no primeiro e apaga o q esta no primeiro
+        document.getElementById("teste").innerHTML = pessoa.join(" - ");//trocar o separador entre os itens
+        
+        const lista = ["arroz","feijao","macarrao","leite"]; 
+        const lista2 = ["Peixe","Frango","Carne"]; 
+        const superLista =lista.concat(lista2);
+        console.log(pessoa);
+        document.getElementById("teste1").innerHTML = superLista.join(" - ");
+        console.log("É um Array? "+Array.isArray(pessoa));
+       // const pessoa2 = {nome:"Chirley",sobrenome:"Santos",idade:30} //Objeto       
+       // console.log(location.pathname);
+       // const lista = ["arroz","feijao","macarrao","leite"]; 
+       // alert(lista[3]);
+       const numeros = [3,4,1,2,6,5,7,9,8,10];
+       numeros.sort(function(a,b){return a-b}); //para ordernar numeros
+         document.getElementById("teste3").innerHTML = numeros.join(" - ");
+    </script>
+</body>
+</html>
