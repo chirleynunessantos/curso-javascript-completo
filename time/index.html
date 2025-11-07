@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .start {
+            background-color: #348888;
+            color: #dad1ce;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            ;
+            font-size: 50px;
+            ;
+        }
+
+        .stop {
+            background-color: #22BABB;
+            color: #dad1ce;
+            font-size: 50px;
+            ;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Controle de tempo</h1>
+    <h2 id="tempo">0</h2>
+    <button onclick="ativatContagem()" class="start">Ativar Contagem</button>
+    <button onclick="pararContagem()" class="stop">Parar Contagem</button>
+
+    <script>
+        function ativatContagem() {
+            contagem = setInterval(function () {
+                var cronometro = document.getElementById('tempo').innerHTML;
+
+                var soma = parseInt(cronometro) + 1;
+                document.getElementById("tempo").innerHTML = soma;
+                /*
+         
+                 //Executa apenas uma vez após o tempo determinado
+                 setTimeout( function (){
+                     document.getElementById('tempo').innerHTML = "Executou o setTomeout";
+          */
+            }, 1000);
+
+
+        }
+
+        function pararContagem() {
+            clearInterval(contagem);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
