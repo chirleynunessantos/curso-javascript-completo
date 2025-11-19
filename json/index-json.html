@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <pre id="area"></pre>
+
+        <script>
+
+      /*      const carro = {
+                marca:"Fiat",
+                modelo:"Uno",
+                ano:2021,
+                motor: ["1.6","1.4","1.0"]
+            }
+
+            //Converteu o objeto para texto
+            let texto  = JSON.stringify(carro);
+
+            document.getElementById('area').innerHTML = texto;
+
+            // converte texto para objeto
+
+            let obj = JSON.parse(texto);
+
+            console.log(obj.modelo)
+            console.log(obj.motor[0])
+*/
+
+            const ajax = new  XMLHttpRequest();
+
+            ajax.open('GET','https://viacep.com.br/03733000/json');
+
+            ajax.send();
+
+            ajax.onload = function(){
+                document.getElementById('area').innerHTML = this.response();
+            }
+
+        </script>
+</body>
+</html>
